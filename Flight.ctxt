@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Flight
+comment1.params=origin\ destination\ departureHours\ departureMinutes\ flightDuration\ noOfPassengers\ price
+comment1.target=Flight(java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ int,\ int)
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=other
+comment2.target=Flight(Flight)
+comment3.params=num
+comment3.target=int\ validatePassengersCapacity(int)
+comment4.params=other
+comment4.target=boolean\ equals(Flight)
+comment5.params=
+comment5.target=void\ getArrivalTime()
+comment5.text=\r\n\ todo\:\ add\ support\ for\ earlier\ depart\ time\r\n
+comment6.params=num
+comment6.target=boolean\ addPassengers(int)
+comment7.params=other
+comment7.target=boolean\ isCheaper(Flight)
+comment8.params=
+comment8.target=double\ totalPrice()
+comment9.params=other
+comment9.target=boolean\ landsEarlier(Flight)
+numComments=11
