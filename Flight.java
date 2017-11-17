@@ -6,7 +6,7 @@ public class Flight {
     static final int MIN_PRICE = 0;
 
     private String _origin, _destination;
-    Time1 _departure;
+    private Time1 _departure;
     private int _flightDuration, _noOfPassengers, _price;
     private boolean _isFull;
 
@@ -59,14 +59,14 @@ public class Flight {
         //update hour and minutes values and return update object
 
         //create new time ,clone data from current, update the time and return arrivaltime;
-        Time1 arrialTime = new Time1(_departure);
-        arrialTime.setHour(totalMinutes / MINUTES_IN_HOUR);
-        arrialTime.setMinute(totalMinutes % MINUTES_IN_HOUR);
+        Time1 arrivalTime = new Time1(_departure);
+        arrivalTime.setHour(totalMinutes / MINUTES_IN_HOUR);
+        arrivalTime.setMinute(totalMinutes % MINUTES_IN_HOUR);
 
-        return arrialTime;
+        return arrivalTime;
     }
 
-    private boolean addPassengers(int num) {
+    public boolean addPassengers(int num) {
         if ((_noOfPassengers + num) < MAX_CAPACITY) {
             _noOfPassengers += num;
             _isFull = false;
@@ -87,8 +87,8 @@ public class Flight {
         return (_price < other._price) ? true : false;
     }
 
-    public double totalPrice() {
-        return (_noOfPassengers * (double) _price);
+    public int totalPrice() {
+        return (_noOfPassengers * _price);
     }
 
     public boolean landsEarlier(Flight other) {
@@ -103,10 +103,6 @@ public class Flight {
             " Flight is " + passengersAvailableStatus + " full.");
     }
 
-    /**
-     * todo's
-     *     - create get/set methods by the class api, good luck.
-     */
     public String getOrigin() {
         return _origin;
     }
@@ -167,11 +163,6 @@ public class Flight {
         if (price >= MIN_PRICE) {
             _price = price;
         }
-    }
-
-    public boolean addPassengers(int num) {
-        validatePassengersCapacity += addPassengers;
-        (validatePassengersCapacity += addPassengers <= MAX_CAPACITY) ? true: false;
     }
 
 
