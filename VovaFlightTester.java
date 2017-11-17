@@ -81,7 +81,7 @@ public class VovaFlightTester
         
         //setOrigin aliasing check
         System.out.println("==========================================");
-        System.out.println("SETORIGIN ALIASING CHECK");
+        System.out.println("setOrigin aliasing check");
         System.out.println("==========================================");
         
         String originTempSet = "Jerusalem";
@@ -93,9 +93,8 @@ public class VovaFlightTester
         
         //addPassengers,setNoOfPassengers,isFull,toString and getPassengers test.
         System.out.println("==========================================");
-        System.out.println("addPassengers,setNoOfPassengers,isFull,toString and getPassengers test.");
+        System.out.println("addPassengers,setNoOfPassengers,isFull,toString and getPassengers test");
         System.out.println("==========================================");
-        
         System.out.println("The number of passangers of the second flight: " +secondFlight.getNoOfPassengers());
         System.out.println("Were 200 passengers added?: " +secondFlight.addPassengers(200)+" Need to be true");
         System.out.println("The number of passangers of the second flight: " +secondFlight.getNoOfPassengers()+" Need to be 245");
@@ -120,7 +119,7 @@ public class VovaFlightTester
         
         //getArrival,landsEarliear  tests.
         System.out.println("==========================================");
-        System.out.println("GETARRIVAL,LANDSEARLIEAR  TESTS.");
+        System.out.println("getArrival,landsEarliear  tests.");
         System.out.println("==========================================");
         
         System.out.println("The arrival time of the first flight: " +firstFlight.getArrivalTime()+" Need to be 18:55");
@@ -142,7 +141,6 @@ public class VovaFlightTester
         System.out.println("==========================================");
         System.out.println("getPrice,isCheper and total price tests.");
         System.out.println("==========================================");
-        
         System.out.println("first flight price: " +firstFlight.getPrice()+" Need to be 1000");
         System.out.println("second flight price: " +secondFlight.getPrice()+" Need to be 1000");
         secondFlight.setPrice(5000);

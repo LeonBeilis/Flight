@@ -62,7 +62,13 @@ public class Flight {
         Time1 arrivalTime = new Time1(_departure);
         arrivalTime.setHour(totalMinutes / MINUTES_IN_HOUR);
         arrivalTime.setMinute(totalMinutes % MINUTES_IN_HOUR);
-
+        System.out.println("======[[ DEBUG ARRIVAL TIME - START ]]======");
+        // System.out.println("ARRIVAL TIME: " + arrivalTime);
+        // System.out.println("TOTAL MINUTES: " + totalMinutes);
+        System.out.println("FLIGHT DURATION: " + _flightDuration);
+        System.out.println("LEAVE HOUR: " + _departure.getHour() );
+        System.out.println("LEAVE MINUTE: " + _departure.getMinute() );
+        System.out.println("=======[[ DEBUG ARRIVAL TIME - END ]]=======");
         return arrivalTime;
     }
 
@@ -97,9 +103,9 @@ public class Flight {
     }
 
     public String toString() {
-        String passengersAvailableStatus = (_isFull) ? "" : "not";
+        String passengersAvailableStatus = (_isFull) ? "" : " not";
         return ("Flight from " + _origin + " to " + _destination + " departs at " + _departure +
-            " Flight is " + passengersAvailableStatus + " full.");
+            " Flight is" + passengersAvailableStatus + " full.");
     }
 
     public String getOrigin() {
@@ -107,7 +113,8 @@ public class Flight {
     }
 
     public Time1 getDeparture() {
-        return _departure;
+        return (new Time1(_departure));
+        // return _departure;
     }
 
     public String getDestination() {
@@ -142,7 +149,7 @@ public class Flight {
     }
 
     public void setDeparture(Time1 departure) {
-        _departure = departure;
+        _departure = new Time1(departure);
     }
 
     public void setFlightDuration(int durTimeMinutes) {
@@ -152,10 +159,10 @@ public class Flight {
     }
 
     public void setNoOfPassengers(int noOfPass) {
-        if ((noOfPass >= MIN_CAPACITY) && (noOfPass <= MAX_CAPACITY)) {
+        if((noOfPass >= MIN_CAPACITY) && (noOfPass <= MAX_CAPACITY)) {
             _noOfPassengers = noOfPass;
+            _isFull = (_noOfPassengers == MAX_CAPACITY) ? true : false;
         }
-
     }
 
     public void setPrice(int price) {
