@@ -11,9 +11,9 @@ public class Flight {
     private boolean _isFull;
 
     public Flight(
-        String origin, String destination,
-        int departureHours, int departureMinutes, int flightDuration,
-        int noOfPassengers, int price
+    String origin, String destination,
+    int departureHours, int departureMinutes, int flightDuration,
+    int noOfPassengers, int price
     ) {
         _origin = origin;
         _destination = destination;
@@ -65,7 +65,7 @@ public class Flight {
 
         return arrivalTime;
     }
-    
+
     /**
      * check's if the sum current number of passengers + received number
      * is under/equal max capacity then add and return true
@@ -75,7 +75,7 @@ public class Flight {
     public boolean addPassengers(int num) {
         if((_noOfPassengers + num) <= MAX_CAPACITY) {
             _noOfPassengers += num;
-            _isFull = ((_noOfPassengers += num) == MAX_CAPACITY) ? true : false;
+            _isFull = (_noOfPassengers == MAX_CAPACITY) ? true : false;
             return true;
         } else {
             return false;
@@ -163,6 +163,5 @@ public class Flight {
             _price = price;
         }
     }
-
 
 }
