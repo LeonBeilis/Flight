@@ -65,20 +65,19 @@ public class Flight {
 
         return arrivalTime;
     }
-
+    
+    /**
+     * check's if the sum current number of passengers + received number
+     * is under/equal max capacity then add and return true
+     * - if sum equal to max capacity update isfull to true
+     * otherwise return false
+     */
     public boolean addPassengers(int num) {
-        if ((_noOfPassengers + num) < MAX_CAPACITY) {
+        if((_noOfPassengers + num) <= MAX_CAPACITY) {
             _noOfPassengers += num;
-            _isFull = false;
+            _isFull = ((_noOfPassengers += num) == MAX_CAPACITY) ? true : false;
             return true;
-        } else if (_noOfPassengers >= MAX_CAPACITY) {
-            _isFull = true;
-            return false;
-        } else if ((_noOfPassengers + num) >= MAX_CAPACITY) {
-            _isFull = false;
-            return false;
         } else {
-            _isFull = false;
             return false;
         }
     }

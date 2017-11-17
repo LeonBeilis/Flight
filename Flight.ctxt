@@ -41,6 +41,7 @@ comment5.target=Time1\ getArrivalTime()
 comment5.text=\r\n\ todo\:\ add\ support\ for\ earlier\ depart\ time\r\n
 comment6.params=num
 comment6.target=boolean\ addPassengers(int)
+comment6.text=\r\n\ check's\ if\ the\ sum\ current\ number\ of\ passengers\ +\ received\ number\r\n\ is\ under/equal\ max\ capacity\ then\ add\ and\ return\ true\r\n\ -\ if\ sum\ equal\ to\ max\ capacity\ update\ isfull\ to\ true\r\n\ otherwise\ return\ false\r\n
 comment7.params=other
 comment7.target=boolean\ isCheaper(Flight)
 comment8.params=

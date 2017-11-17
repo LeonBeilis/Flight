@@ -5,7 +5,9 @@ public class VovaFlightTester
     public static void main(String args[])
     {
         //Copy Constructor aliasing check.
-        
+        System.out.println("==========================================");
+        System.out.println("COPY CONSTRUCTOR ALIASING CHECK.");
+        System.out.println("==========================================");
         Flight firstFlight = new Flight("London","TLV",12,15,400,45,1000);
         Flight secondFlight = new Flight(firstFlight);
         secondFlight.setPrice(3000);
@@ -14,6 +16,9 @@ public class VovaFlightTester
         secondFlight.setPrice(1000);
         
         //getArrival aliasing check.
+        System.out.println("==========================================");
+        System.out.println("GETARRIVAL ALIASING CHECK.");
+        System.out.println("==========================================");
         
         secondFlight.setFlightDuration(500);
         System.out.println("The arrival time of the first flight: " +firstFlight.getArrivalTime()+" Need to be 18:55");
@@ -21,6 +26,9 @@ public class VovaFlightTester
         secondFlight.setFlightDuration(400);
         
         //setDeparture aliasing check.
+        System.out.println("==========================================");
+        System.out.println("SETDEPARTURE ALIASING CHECK.");
+        System.out.println("==========================================");
         
         Time1 depTemp = new Time1(10,15);
         secondFlight.setDeparture(depTemp);
@@ -33,18 +41,27 @@ public class VovaFlightTester
         secondFlight.setDeparture(depTemp);
         
         //getDestination aliasing check.
+        System.out.println("==========================================");
+        System.out.println("GETDESTINATION ALIASING CHECK.");
+        System.out.println("==========================================");
         
         String destTemp = secondFlight.getDestination();
         destTemp = "Dublin";
         System.out.println("The destination of the second flight: " +secondFlight.getDestination()+ " Need to be TLV");
         
         //getOrigin aliasing check
+        System.out.println("==========================================");
+        System.out.println("GETORIGIN ALIASING CHECK");
+        System.out.println("==========================================");
         
         destTemp = secondFlight.getOrigin();
         destTemp = "Dublin";
         System.out.println("second flight origin: " +secondFlight.getOrigin()+" Need to be London");
         
         //getDeparture aliasing check.
+        System.out.println("==========================================");
+        System.out.println("GETDEPARTURE ALIASING CHECK.");
+        System.out.println("==========================================");
         
         Time1 depTimeSet = secondFlight.getDeparture();
         depTimeSet.setHour(20);
@@ -52,6 +69,9 @@ public class VovaFlightTester
         System.out.println("The departure time of the second flight: " +secondFlight.getDeparture() + " Need to be 12:15");
         
         //setDestination aliasing check.
+        System.out.println("==========================================");
+        System.out.println("SETDESTINATION ALIASING CHECK.");
+        System.out.println("==========================================");
         
         String destTempSet = "Rio";
         secondFlight.setDestination(destTempSet);
@@ -60,6 +80,9 @@ public class VovaFlightTester
         secondFlight.setDestination("TLV");
         
         //setOrigin aliasing check
+        System.out.println("==========================================");
+        System.out.println("SETORIGIN ALIASING CHECK");
+        System.out.println("==========================================");
         
         String originTempSet = "Jerusalem";
         secondFlight.setOrigin(originTempSet);
@@ -69,6 +92,10 @@ public class VovaFlightTester
     
         
         //addPassengers,setNoOfPassengers,isFull,toString and getPassengers test.
+        System.out.println("==========================================");
+        System.out.println("addPassengers,setNoOfPassengers,isFull,toString and getPassengers test.");
+        System.out.println("==========================================");
+        
         System.out.println("The number of passangers of the second flight: " +secondFlight.getNoOfPassengers());
         System.out.println("Were 200 passengers added?: " +secondFlight.addPassengers(200)+" Need to be true");
         System.out.println("The number of passangers of the second flight: " +secondFlight.getNoOfPassengers()+" Need to be 245");
@@ -92,6 +119,9 @@ public class VovaFlightTester
         System.out.println("The number of passangers of the second flight: " +secondFlight.getNoOfPassengers()+" Need to be 200");
         
         //getArrival,landsEarliear  tests.
+        System.out.println("==========================================");
+        System.out.println("GETARRIVAL,LANDSEARLIEAR  TESTS.");
+        System.out.println("==========================================");
         
         System.out.println("The arrival time of the first flight: " +firstFlight.getArrivalTime()+" Need to be 18:55");
         System.out.println("The arrival time of the second flight: " +secondFlight.getArrivalTime()+" Need to be 18:55");
@@ -109,6 +139,10 @@ public class VovaFlightTester
         System.out.println("Is the second flight lands before the first:" +secondFlight.landsEarlier(firstFlight)+" Need to be true");
         
         //getPrice,isCheper and total price tests.
+        System.out.println("==========================================");
+        System.out.println("getPrice,isCheper and total price tests.");
+        System.out.println("==========================================");
+        
         System.out.println("first flight price: " +firstFlight.getPrice()+" Need to be 1000");
         System.out.println("second flight price: " +secondFlight.getPrice()+" Need to be 1000");
         secondFlight.setPrice(5000);
