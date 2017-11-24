@@ -49,7 +49,7 @@ public class Flight {
     public Flight(Flight other) {
         _origin = other._origin;
         _dest = other._dest;
-        _departure = other._departure;
+        _departure = new Time1(other._departure.getHour(), other._departure.getMinute());
         _durTimeMinutes = other._durTimeMinutes;
         _noOfPass = other._noOfPass;
         _isFull = (_noOfPass == MAX_CAPACITY) ? true : false;
