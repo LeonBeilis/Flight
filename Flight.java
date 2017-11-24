@@ -143,7 +143,7 @@ public class Flight {
     
     /**
      * Return a string representation of this flight (for example: "Flight from London to Paris departs at 09:24.Flight is full.").
-     * @return  String representation of this flight (for example: "Flight from London to Paris departs at 09:24.Flight is full.").
+     * @return  String representation of this flight
      */
     public String toString() {
         String passengersAvailableStatus = (_isFull) ? "" : " not";
