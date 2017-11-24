@@ -2,11 +2,11 @@ public class Time1 {
 
     private int _hours, _minutes;
 
-    static final int MINIMUM_MINUTE_RANGE = 0;
-    static final int MAXIMUM_MINUTE_RANGE = 59;
-    static final int MINIMUM_HOUR_RANGE = 0;
-    static final int MAXIMUM_HOUR_RANGE = 23;
-    static final int MINUTES_IN_HOUR = 60;
+    private static final int MINIMUM_MINUTE_RANGE = 0;
+    private static final int MAXIMUM_MINUTE_RANGE = 59;
+    private static final int MINIMUM_HOUR_RANGE = 0;
+    private static final int MAXIMUM_HOUR_RANGE = 23;
+    private static final int MINUTES_IN_HOUR = 60;
 
     /**
      * class constructor

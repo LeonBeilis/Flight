@@ -10,7 +10,7 @@ public class Flight {
     private static final int MIN_PRICE = 0;
     
     /**
-     * private delcartions
+     * private declarations
      */
     private String _dest, _origin;
     private Time1 _departure;
@@ -19,7 +19,7 @@ public class Flight {
     
     /**
      * Constructor for a Flight object. If the number of passengers exceeds the maximum capacity the number of passengers
-     * will be set to the maxmum capacity If the number of passengers is negative the number of passengers will be set to zero.
+     * will be set to the maximum capacity If the number of passengers is negative the number of passengers will be set to zero.
      * If the flight duration is negative the flight duration will be set to zero.
      * If the price is negative the price will be set to zero.
      * @param   dest                The city the flight lands at.
@@ -96,7 +96,7 @@ public class Flight {
 
     /**
      * Add passengers to this flight. If the number of passengers exceeds he maximum capacity,
-     * no passengers are added and alse is returned. If the flight becomes full,
+     * no passengers are added and also is returned. If the flight becomes full,
      * the boolean attribute describing whether the flight if full becomes true.
      * Assume parameter is positive.
      * @param   num     The number of passengers to be added to this flight.
