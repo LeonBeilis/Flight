@@ -3,11 +3,11 @@ public class Flight {
     /**
      * final declartions
      */
-    static final int MAX_CAPACITY = 250;
-    static final int MIN_CAPACITY = 0;
-    static final int MINUTES_IN_DAY = 1440;
-    static final int MINUTES_IN_HOUR = 60;
-    static final int MIN_PRICE = 0;
+    private static final int MAX_CAPACITY = 250;
+    private static final int MIN_CAPACITY = 0;
+    private static final int MINUTES_IN_DAY = 1440;
+    private static final int MINUTES_IN_HOUR = 60;
+    private static final int MIN_PRICE = 0;
     
     /**
      * private delcartions
